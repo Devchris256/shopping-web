@@ -1,0 +1,34 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.header {
+    padding-block: 1rem;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__logoImg{
+        inline-size: 8rem;
+        block-size: 2.5rem;
+    }
+
+    @include m.tablet {
+
+        &__logoImg{
+            inline-size: 12rem;
+            block-size: 3.5rem;
+            }
+    }
+    
+    @include m.desk {
+        padding-block: 2rem;
+
+        &__menu {
+            display: none;
+        }   
+    }
+}

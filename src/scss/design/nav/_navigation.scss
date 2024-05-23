@@ -1,0 +1,38 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.nav {
+    display: none;
+
+    @include m.desk {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        gap: 3.375rem;
+
+        &__link {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        &__item {
+            text-transform: uppercase;
+            color: v.$black10;
+            font-size: 1.25rem;
+        }
+
+        &__button {
+            @include m.button(uppercase, 1.5rem, .875rem, 1.25rem)
+        }
+    }
+
+    @include m.deskXL {
+        &__link {
+            gap: 4rem;
+        }
+    }
+
+
+    
+}
