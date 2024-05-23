@@ -1,31 +1,31 @@
-// FUENTE PERSONALIZADA: ROBOTO (ESTATICA)
+// FUENTE PERSONALIZADA: POPPINS (ESTATICA)
 
 @font-face {
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     src:
-    url("../font/Roboto-Regular.woff2") format("woff2"),
-    url("../font/Roboto-Regular.woff") format("woff"),
-      url('../font/Roboto-Regular.ttf') format("truetype");
+    url("../font/Poppins-Regular.woff2") format("woff2"),
+    url("../font/Poppins-Regular.woff") format("woff"),
+      url('../font/Poppins-Regular.ttf') format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     src:
-    url("../font/Roboto-Medium.woff2") format("woff2"),
-    url("../font/Roboto-Medium.woff") format("woff"),
-      url('../font/Roboto-Medium.ttf') format("truetype");
+    url("../font/Poppins-Medium.woff2") format("woff2"),
+    url("../font/Poppins-Medium.woff") format("woff"),
+      url('../font/Poppins-Medium.ttf') format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     src:
-    url("../font/Roboto-Black.woff2") format("woff2"),
-    url("../font/Roboto-Black.woff") format("woff"),
-      url('../font/Roboto-Black.ttf') format("truetype");
+    url("../font/Poppins-Black.woff2") format("woff2"),
+    url("../font/Poppins-Black.woff") format("woff"),
+      url('../font/Poppins-Black.ttf') format("truetype");
     font-weight: 900;
     font-style: normal;
 }
