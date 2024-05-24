@@ -23,7 +23,7 @@
         }
 
         &__button {
-            @include m.button(uppercase, 1.5rem, .875rem, 1.25rem)
+            @include m.button(uppercase, 1.25rem, .875rem, 1.25rem)
         }
     }
 

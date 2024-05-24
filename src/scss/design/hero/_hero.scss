@@ -1,0 +1,156 @@
+@use '../../base/minxis' as m;
+@use '../../base/variables' as v;
+
+.hero {
+    &__content {
+        background: v.$lightBlue;
+        border-radius: 3.5rem;
+        padding-block-start: 1rem;
+        padding-inline: 1.5rem;
+    }
+
+    &__details {
+        text-align: center;
+    }
+    
+    &__title {
+        text-transform: uppercase;
+    }
+    
+    &__deco {
+        position: relative;
+        z-index: 0;
+        
+        &::before {
+            @include m.deco();
+        }
+    }
+    
+    &__deco--white {
+        &::before {
+            @include m.deco(v.$white);
+            
+        }
+    }
+    
+    &__button {
+        @include m.button(none, 1rem, 1rem, 1.5rem);
+        display: inline-block;
+    }
+    
+    &__img {
+        margin-block-start: 2rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+        inline-size: 100%;
+        
+        &::before {
+            content: ' ';
+            display: block;
+            inline-size: 100%;
+            block-size: 100%;
+            position: absolute;
+            background-image: url('../img/star.svg'), url('../img/star-1.svg'), url('../img/star-2.svg'), url('../img/star-3.svg');
+            background-size: 1.5rem, 1.5rem;
+            background-repeat: no-repeat;
+            background-position: left top, right top 15px, left bottom 5px, right bottom 20px;
+        }
+        
+    }
+    
+    &__imgPicture {
+        max-inline-size: 27rem;
+
+    }
+
+    @include m.phone {
+        
+        &__title {
+            font-size: 3rem;
+        }
+        
+        &__img {
+            &::before {
+                background-size: 2rem, 2rem;
+            }
+        }
+    }
+
+
+    @include m.tablet {
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding-inline: 2rem;
+            padding-block: 0;
+        }
+
+        &__details {
+            padding-block: 2rem;
+            text-align: left;
+        }
+
+        &__text {
+            font-size: 1.5rem;
+        }
+
+        &__img {
+            &::before {
+                background-size: 2.5rem, 2.5rem;
+            }
+        }
+    }
+
+    @include m.desk {
+        &__content {
+            padding-inline: 3.5rem;
+        }
+
+        &__title {
+            font-size: 4rem;
+        }
+
+        &__text {
+            font-size: 2rem
+        }
+
+        &__button {
+            @include m.button(none, 1.5rem, 1rem, 1.5rem);
+            display: inline-block;
+        }
+
+        &__imgPicture {
+            max-inline-size: 100%;
+        }
+
+        &__img {
+            &::before {
+                background-size: 3.5rem, 3.5rem;
+            }
+        }
+    }
+
+    @include m.deskXL {
+        &__content {
+            padding-inline: 5rem;
+        }
+
+        &__title {
+            font-size: 6rem;
+        }
+
+        &__button {
+            @include m.button(none, 2rem, 1rem, 1.5rem);
+            display: inline-block;
+        }
+
+        &__img {
+            &::before {
+                background-size: 5rem, 5rem;
+            }
+        }
+    }
+
+}

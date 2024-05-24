@@ -18,11 +18,14 @@
 }
 html {
   font-size: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: "Poppins", sans-serif;
   color: #000000;
 }
@@ -32,10 +35,10 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 2.5rem;
   font-weight: 900;
-  line-height: 120;
   color: #000000;
+  margin-block: 1rem;
 }
 
 h2 {
@@ -47,6 +50,11 @@ h2 {
 
 a {
   text-decoration: none;
+}
+
+img {
+  inline-size: 100%;
+  vertical-align: bottom;
 }
 
 .wrapper {
@@ -67,6 +75,7 @@ a {
 .header__logoImg {
   inline-size: 8rem;
   block-size: 2.5rem;
+  vertical-align: bottom;
 }
 @media (min-width: 768px) {
   .header__logoImg {
@@ -111,7 +120,7 @@ a {
     font-family: "Poppins", sans-serif;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding-block: 0.875rem;
     padding-inline: 1.25rem;
     transition: scale 0.3s;
@@ -123,5 +132,171 @@ a {
 @media (min-width: 1366px) {
   .nav__link {
     gap: 4rem;
+  }
+}
+
+.hero__content {
+  background: #F4F6F5;
+  border-radius: 3.5rem;
+  padding-block-start: 1rem;
+  padding-inline: 1.5rem;
+}
+.hero__details {
+  text-align: center;
+}
+.hero__title {
+  text-transform: uppercase;
+}
+.hero__deco {
+  position: relative;
+  z-index: 0;
+}
+.hero__deco::before {
+  content: " ";
+  display: block;
+  inline-size: 120%;
+  block-size: 105%;
+  background: #E6C744;
+  position: absolute;
+  transform: rotate(-2.5deg);
+  inset-inline-start: -0.25rem;
+  z-index: -1;
+}
+.hero__deco--white::before {
+  content: " ";
+  display: block;
+  inline-size: 120%;
+  block-size: 105%;
+  background: #FFFFFF;
+  position: absolute;
+  transform: rotate(-2.5deg);
+  inset-inline-start: -0.25rem;
+  z-index: -1;
+}
+.hero__button {
+  color: #FFFFFF;
+  background: #000000;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  text-transform: none;
+  font-size: 1rem;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  transition: scale 0.3s;
+  display: inline-block;
+}
+.hero__button:hover {
+  scale: 1.1;
+}
+.hero__img {
+  margin-block-start: 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  inline-size: 100%;
+}
+.hero__img::before {
+  content: " ";
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  position: absolute;
+  background-image: url("../img/star.svg"), url("../img/star-1.svg"), url("../img/star-2.svg"), url("../img/star-3.svg");
+  background-size: 1.5rem, 1.5rem;
+  background-repeat: no-repeat;
+  background-position: left top, right top 15px, left bottom 5px, right bottom 20px;
+}
+.hero__imgPicture {
+  max-inline-size: 27rem;
+}
+@media (min-width: 425px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+  .hero__img::before {
+    background-size: 2rem, 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .hero__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 2rem;
+    padding-block: 0;
+  }
+  .hero__details {
+    padding-block: 2rem;
+    text-align: left;
+  }
+  .hero__text {
+    font-size: 1.5rem;
+  }
+  .hero__img::before {
+    background-size: 2.5rem, 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero__content {
+    padding-inline: 3.5rem;
+  }
+  .hero__title {
+    font-size: 4rem;
+  }
+  .hero__text {
+    font-size: 2rem;
+  }
+  .hero__button {
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    text-transform: none;
+    font-size: 1.5rem;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    transition: scale 0.3s;
+    display: inline-block;
+  }
+  .hero__button:hover {
+    scale: 1.1;
+  }
+  .hero__imgPicture {
+    max-inline-size: 100%;
+  }
+  .hero__img::before {
+    background-size: 3.5rem, 3.5rem;
+  }
+}
+@media (min-width: 1366px) {
+  .hero__content {
+    padding-inline: 5rem;
+  }
+  .hero__title {
+    font-size: 6rem;
+  }
+  .hero__button {
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    text-transform: none;
+    font-size: 2rem;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    transition: scale 0.3s;
+    display: inline-block;
+  }
+  .hero__button:hover {
+    scale: 1.1;
+  }
+  .hero__img::before {
+    background-size: 5rem, 5rem;
   }
 }

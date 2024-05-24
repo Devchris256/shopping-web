@@ -24,7 +24,7 @@
     }
 }
 
-@mixin button($text, $size, $block:1rem, $inline:2.5rem) {
+@mixin button($text:none, $size:1.875rem, $block:1rem, $inline:2.5rem) {
     color: v.$white;
     background: v.$black;
     border-radius: .5rem;
@@ -40,4 +40,16 @@
     &:hover {
         scale: 1.1;        
     }
+}
+
+@mixin deco ($background:v.$crem){
+    content: ' ';
+    display: block;
+    inline-size: 120%;
+    block-size: 105%;
+    background: $background;
+    position: absolute;
+    transform: rotate(-2.5deg);
+    inset-inline-start: -.25rem;
+    z-index: -1;
 }
