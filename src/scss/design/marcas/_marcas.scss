@@ -1,0 +1,74 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.marcas {
+    margin-block: 2rem;
+    background: v.$crem;
+    padding-block: 1.5rem;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+        position: relative;
+
+
+        &::before {
+            content: ' ';
+            display: block;
+            block-size: 100%;
+            inline-size: 2px;
+            background: #cfb439;
+            position: absolute;
+        }
+    }
+
+    &__logo {
+        flex-grow: 1;
+        inline-size: 40%;
+        flex-shrink: 0;
+    }
+
+    @include m.tablet {
+        &__content {
+            &::before {
+                inset-inline-start: 33%;
+            }
+
+            &::after {
+                content: ' ';
+                display: block;
+                block-size: 100%;
+                inline-size: 2px;
+                background: #cfb439;
+                position: absolute;
+                inset-inline-start: 66%;
+            }
+        }
+
+        &__logo {
+            inline-size: 30%;
+        }
+    }
+
+    @include m.desk {
+        padding-block: 3rem;
+
+        &__content {
+            @include m.gridColum(6);
+            gap: 3rem;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+        &__logo {
+            inline-size: 100%;
+        }
+    }
+
+}

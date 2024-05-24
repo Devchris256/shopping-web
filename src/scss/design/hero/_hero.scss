@@ -61,8 +61,7 @@
     }
     
     &__imgPicture {
-        max-inline-size: 27rem;
-
+        block-size: auto;
     }
 
     @include m.phone {

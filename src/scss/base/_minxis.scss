@@ -53,3 +53,8 @@
     inset-inline-start: -.25rem;
     z-index: -1;
 }
+
+@mixin gridColum($columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+}

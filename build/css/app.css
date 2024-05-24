@@ -54,6 +54,7 @@ a {
 
 img {
   inline-size: 100%;
+  max-inline-size: 100%;
   vertical-align: bottom;
 }
 
@@ -210,7 +211,7 @@ img {
   background-position: left top, right top 15px, left bottom 5px, right bottom 20px;
 }
 .hero__imgPicture {
-  max-inline-size: 27rem;
+  block-size: auto;
 }
 @media (min-width: 425px) {
   .hero__title {
@@ -298,5 +299,65 @@ img {
   }
   .hero__img::before {
     background-size: 5rem, 5rem;
+  }
+}
+
+.marcas {
+  margin-block: 2rem;
+  background: #E6C744;
+  padding-block: 1.5rem;
+}
+.marcas__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  position: relative;
+}
+.marcas__content::before {
+  content: " ";
+  display: block;
+  block-size: 100%;
+  inline-size: 2px;
+  background: #cfb439;
+  position: absolute;
+}
+.marcas__logo {
+  flex-grow: 1;
+  inline-size: 40%;
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .marcas__content::before {
+    inset-inline-start: 33%;
+  }
+  .marcas__content::after {
+    content: " ";
+    display: block;
+    block-size: 100%;
+    inline-size: 2px;
+    background: #cfb439;
+    position: absolute;
+    inset-inline-start: 66%;
+  }
+  .marcas__logo {
+    inline-size: 30%;
+  }
+}
+@media (min-width: 1024px) {
+  .marcas {
+    padding-block: 3rem;
+  }
+  .marcas__content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3rem;
+  }
+  .marcas__content::before, .marcas__content::after {
+    display: none;
+  }
+  .marcas__logo {
+    inline-size: 100%;
   }
 }
