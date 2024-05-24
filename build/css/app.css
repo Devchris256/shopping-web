@@ -42,9 +42,8 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 1.75rem;
   font-weight: 900;
-  line-height: 50;
   color: #000000;
 }
 
@@ -217,6 +216,9 @@ img {
   .hero__title {
     font-size: 3rem;
   }
+  .hero__text {
+    font-size: 1.125rem;
+  }
   .hero__img::before {
     background-size: 2rem, 2rem;
   }
@@ -359,5 +361,94 @@ img {
   }
   .marcas__logo {
     inline-size: 100%;
+  }
+}
+
+.new__title {
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  margin-block-end: 2rem;
+}
+.new__title::before {
+  content: " ";
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  inset-block-start: 10%;
+  background-image: url("../img/vector.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: right bottom;
+  background-size: 50% 70%;
+  z-index: -1;
+}
+.new__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.new__details {
+  position: relative;
+}
+.new__details::after {
+  content: " ";
+  display: block;
+  inline-size: 2rem;
+  block-size: 2rem;
+  background-image: url("../img/flecha.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+}
+.new__type {
+  font-size: 1.25rem;
+  margin-block-end: 0.875rem;
+}
+.new__text {
+  margin: 0;
+}
+@media (min-width: 425px) {
+  .new__type {
+    font-size: 1.375rem;
+  }
+  .new__text {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 768px) {
+  .new__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .new__title {
+    font-size: 2.5rem;
+  }
+  .new__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .new__type {
+    font-size: 1.75rem;
+  }
+  .new__text {
+    font-size: 1.375rem;
+  }
+}
+@media (min-width: 1366px) {
+  .new__title {
+    font-size: 3rem;
+  }
+  .new__type {
+    font-size: 1.875rem;
+  }
+  .new__text {
+    font-size: 1.5rem;
   }
 }

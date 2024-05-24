@@ -42,13 +42,13 @@
                     <picture>
                         <source srcset="./build/img/girl-header.avif" type="image/avif">
                         <source srcset="./build/img/girl-header.webp" type="image/webp">
-                        <img class="hero__imgPicture" loading="lazy" src="./build/img/girl-header.png"  alt="chica sonriendo con abrigo peluche de color lila" width="220" height="216">
+                        <img class="hero__imgPicture" src="./build/img/girl-header.png"  alt="chica sonriendo con abrigo peluche de color lila" width="220" height="216">
                     </picture>
                 </div> <!-- img -->
             </div> <!-- content -->
         </div> <!-- wrapper -->
     </div> <!-- hero -->
-    <div class="marcas">
+    <div class="marcas" aria-label="marcas" role="region">
         <div class="wrapper">
             <div class="marcas__content">
                 <div class="marcas__logo">
@@ -72,5 +72,53 @@
             </div> <!-- content -->
         </div> <!-- wrapper -->
     </div> <!-- marcas -->
+    <main class="main">
+        <section class="new" aria-label="Nuevos ingresos">
+            <div class="wrapper">
+                <h2 class="new__title">new arrivals</h2>
+                <div class="new__content">
+                    <div class="new__card">
+                        <div class="new__img">
+                            <picture>
+                                <source srcset="./build/img/girl-gray.avif" type="image/avif">
+                                <source srcset="./build/img/girl-gray.webp" type="image/webp">
+                                <img class="new__imgPicture" loading="lazy" src="./build/img/girl-gray.jpg" alt="Chica luciendo una polera con capucha color naranja zanahoria">
+                            </picture>
+                        </div>
+                        <div class="new__details">
+                            <h3 class="new__type">Hoodies & Sweetshirt</h3>
+                            <p class="new__text">Explore Now!</p>
+                        </div>
+                    </div> <!-- card -->
+                    <div class="new__card">
+                        <div class="new__img">
+                            <picture>
+                                <source srcset="./build/img/girl-purple.avif" type="image/avif">
+                                <source srcset="./build/img/girl-purple.webp" type="image/webp">
+                                <img class="new__imgPicture" loading="lazy" src="./build/img/girl-purple.jpg" alt="Chica luciendo una casaca de color celeste pastel">
+                            </picture>
+                        </div>
+                        <div class="new__details">
+                            <h3 class="new__type">Coats & Parkas</h3>
+                            <p class="new__text">Explore Now!</p>
+                        </div>
+                    </div> <!-- card -->
+                    <div class="new__card">
+                        <div class="new__img">
+                            <picture>
+                                <source srcset="./build/img/girl-blue.avif" type="image/avif">
+                                <source srcset="./build/img/girl-blue.webp" type="image/webp">
+                                <img class="new__imgPicture" loading="lazy" src="./build/img/girl-blue.png" alt="Chica luciendo una polo color blanco">
+                            </picture>
+                        </div>
+                        <div class="new__details">
+                            <h3 class="new__type">Tees & T-Shirt</h3>
+                            <p class="new__text">Explore Now!</p>
+                        </div>
+                    </div> <!-- card -->
+                </div> <!-- content -->
+            </div> <!-- wrapper -->
+        </section> <!-- new -->
+    </main>
 </body>
 </html>

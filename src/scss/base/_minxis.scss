@@ -58,3 +58,17 @@
     display: grid;
     grid-template-columns: repeat($columns, 1fr);
 }
+
+@mixin decoTitle {
+    content: ' ';
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    inset-block-start: 10%;
+    background-image: url('../img/vector.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: right bottom;
+    background-size: 50% 70%;
+    z-index: -1;
+}
