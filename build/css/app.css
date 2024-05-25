@@ -709,3 +709,60 @@ img {
     font-size: 1.5rem;
   }
 }
+
+.app {
+  padding-block: 2rem;
+}
+.app__title {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.app__text {
+  color: #7C7C7C;
+}
+.app__dowloand {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.app__optionImg {
+  block-size: auto;
+}
+@media (min-width: 425px) {
+  .app__text {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 768px) {
+  .app__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .app__details {
+    max-inline-size: 32rem;
+  }
+  .app__text, .app__dowloand {
+    max-inline-size: 27rem;
+  }
+  .app__text {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .app__details {
+    margin: 0 auto;
+  }
+  .app__title {
+    font-size: 3rem;
+  }
+  .app__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .app__imgPicture {
+    max-inline-size: 21rem;
+    vertical-align: center;
+  }
+}

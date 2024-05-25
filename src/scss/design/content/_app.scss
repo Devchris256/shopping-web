@@ -1,0 +1,75 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.app {
+
+    padding-block: 2rem;
+
+    &__title {
+        font-weight: 900;
+        font-size: 2rem;
+    }
+
+    &__text {
+        color: #7C7C7C;
+    }
+    
+    &__dowloand {
+        @include m.gridColum(2);
+        gap: 1rem;
+        
+    }
+
+    &__optionImg {
+        block-size: auto;
+    }
+
+    @include m.phone {
+        &__text {
+            font-size: 1.125rem;
+        }
+    }
+
+    @include m.tablet {
+        &__content {
+            @include m.gridColum(2);
+            align-items: center;
+        }
+
+        &__details {
+            max-inline-size: 32rem;
+        }
+
+        &__text,
+        &__dowloand{
+            max-inline-size: 27rem;
+        }
+
+        &__text {
+            font-size: 1.5rem;
+        }
+    }
+
+    @include m.desk {
+        &__details {
+            margin: 0 auto;
+        }
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__imgPicture {
+            max-inline-size: 21rem;
+            vertical-align: center;
+        }
+    }
+
+
+}
