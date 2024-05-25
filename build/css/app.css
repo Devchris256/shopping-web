@@ -124,6 +124,7 @@ img {
     padding-block: 0.875rem;
     padding-inline: 1.25rem;
     transition: scale 0.3s;
+    display: inline-block;
   }
   .nav__button:hover {
     scale: 1.1;
@@ -185,6 +186,7 @@ img {
   padding-block: 1rem;
   padding-inline: 1.5rem;
   transition: scale 0.3s;
+  display: inline-block;
   display: inline-block;
 }
 .hero__button:hover {
@@ -264,6 +266,7 @@ img {
     padding-inline: 1.5rem;
     transition: scale 0.3s;
     display: inline-block;
+    display: inline-block;
   }
   .hero__button:hover {
     scale: 1.1;
@@ -294,6 +297,7 @@ img {
     padding-block: 1rem;
     padding-inline: 1.5rem;
     transition: scale 0.3s;
+    display: inline-block;
     display: inline-block;
   }
   .hero__button:hover {
@@ -434,8 +438,18 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  .new__img {
+    overflow: hidden;
+    border-radius: 1.25rem;
+  }
+  .new__imgPicture {
+    transition: transform 0.9s;
+  }
+  .new__imgPicture:hover {
+    transform: scale(1.2);
+  }
   .new__type {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .new__text {
     font-size: 1.375rem;
@@ -450,5 +464,154 @@ img {
   }
   .new__text {
     font-size: 1.5rem;
+  }
+}
+
+.pay {
+  background-color: #FFE85E;
+  margin-block: 2rem;
+  position: relative;
+}
+.pay::before {
+  content: " ";
+  display: block;
+  inline-size: 100%;
+  block-size: 50%;
+  position: absolute;
+  inset-block-end: 0;
+  background-image: url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg"), url("../img/girl-yellow.jpg");
+  background-size: 1.5rem 1.5rem, 1.5rem 1.5rem, 1.5rem 1.5rem, 1.5rem 1.5rem, cover;
+  background-repeat: no-repeat;
+  background-position: left 10% top 15%, left 15% top 50%, right 10% top 10%, right 5% bottom 30%, center;
+}
+.pay__content {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+.pay__details {
+  padding-block: 1rem;
+}
+.pay__title {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-block-end: 1.5rem;
+}
+.pay__deco {
+  position: relative;
+  z-index: 0;
+}
+.pay__deco::before {
+  content: " ";
+  display: block;
+  inline-size: 120%;
+  block-size: 105%;
+  background: #FFFFFF;
+  position: absolute;
+  transform: rotate(-2.5deg);
+  inset-inline-start: -0.25rem;
+  z-index: -1;
+}
+.pay__text {
+  font-weight: 700;
+}
+.pay__day {
+  font-weight: 900;
+  margin-block-end: 0.25rem;
+}
+.pay__term {
+  margin-block-start: 0.25rem;
+  margin-block-end: 1rem;
+}
+.pay__button {
+  color: #FFFFFF;
+  background: #000000;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  transition: scale 0.3s;
+  display: inline-block;
+}
+.pay__button:hover {
+  scale: 1.1;
+}
+@media (min-width: 425px) {
+  .pay::before {
+    background-position: left 10% top 15%, left 15% top 50%, right 10% top 10%, right 5% bottom 30%, top 5% center;
+  }
+  .pay__details {
+    padding-block: 2.5rem;
+    max-inline-size: 28.375rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .pay {
+    background: linear-gradient(to bottom, #F9DF56, #EDCE49, #E0C340);
+  }
+  .pay::before {
+    inline-size: 50%;
+    block-size: 100%;
+    background-size: 2.5rem, 2.5rem, 2.5rem, 2.5rem, cover;
+  }
+  .pay__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
+    gap: 2rem;
+  }
+  .pay__details {
+    grid-column: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .pay::before {
+    background-size: 3.5rem, 3.5rem, 3.5rem, 3.5rem, cover;
+  }
+  .pay__button {
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    transition: scale 0.3s;
+    display: inline-block;
+    display: inline-block;
+  }
+  .pay__button:hover {
+    scale: 1.1;
+  }
+}
+@media (min-width: 1366px) {
+  .pay::before {
+    background-size: 5rem, 5rem, 5rem, 5rem, cover;
+  }
+  .pay__button {
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    text-transform: none;
+    font-size: 2rem;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    transition: scale 0.3s;
+    display: inline-block;
+    display: inline-block;
+  }
+  .pay__button:hover {
+    scale: 1.1;
   }
 }

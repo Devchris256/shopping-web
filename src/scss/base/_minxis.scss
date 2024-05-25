@@ -36,6 +36,7 @@
     padding-block: $block;
     padding-inline: $inline;
     transition: scale .3s;
+    display: inline-block;
 
     &:hover {
         scale: 1.1;        

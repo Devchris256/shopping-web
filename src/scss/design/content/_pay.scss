@@ -1,0 +1,122 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.pay {
+    background-color: #FFE85E;
+    margin-block: 2rem;
+    position: relative;
+
+    &::before {
+        content: ' ';
+        display: block;
+        inline-size: 100%;
+        block-size: 50%;
+        position: absolute;
+        inset-block-end: 0;
+        background-image: url('../img/star.svg'), url('../img/star.svg'), url('../img/star.svg'), url('../img/star.svg'), url('../img/girl-yellow.jpg');
+        background-size: 1.5rem 1.5rem, 1.5rem 1.5rem, 1.5rem 1.5rem, 1.5rem 1.5rem, cover;
+        background-repeat: no-repeat;
+        background-position: left 10% top 15%, left 15% top 50% , right 10% top 10%, right 5% bottom 30%, center;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    &__details {
+        padding-block: 1rem;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        margin-block-end: 1.5rem;
+    }
+
+    &__deco {
+        position: relative;
+        z-index: 0;
+
+        &::before {
+            @include m.deco(v.$white);
+        }
+    }
+
+    &__text {
+        font-weight: 700;
+    }
+    
+    &__day {
+        font-weight: 900;
+        margin-block-end: .25rem;
+    }
+
+    &__term {
+        margin-block-start: .25rem;
+        margin-block-end: 1rem;
+    }
+
+    &__button {
+        @include m.button(uppercase, 1rem, 1rem, 1.5rem)
+    }
+
+    @include m.phone {
+        &::before {
+            background-position: left 10% top 15%, left 15% top 50% , right 10% top 10%, right 5% bottom 30%, top 5% center;
+        }
+
+        &__details {
+            padding-block: 2.5rem;
+            max-inline-size: 28.375rem;
+            margin: 0 auto;
+        }
+    }
+
+    @include m.tablet {
+        background: linear-gradient(to bottom, #F9DF56, #EDCE49, #E0C340,);
+
+        &::before {
+            inline-size: 50%;
+            block-size: 100%;
+            background-size: 2.5rem, 2.5rem, 2.5rem, 2.5rem, cover;
+        }
+
+        &__content {
+            @include m.gridColum(2);
+            grid-template-rows: unset;
+            gap: 2rem;
+        }
+
+        &__details {
+            grid-column: 2;
+        }
+
+    }
+
+    @include m.desk {
+        &::before {
+            background-size: 3.5rem, 3.5rem, 3.5rem, 3.5rem, cover;
+        }
+
+
+        &__button {
+            @include m.button(uppercase, 1.5rem, 1rem, 1.5rem);
+            display: inline-block;
+        }
+    }
+
+    @include m.deskXL {
+        &::before {
+            background-size: 5rem, 5rem, 5rem, 5rem, cover;
+        }
+
+
+        &__button {
+            @include m.button(none, 2rem, 1rem, 1.5rem);
+            display: inline-block;
+        }
+    }
+
+}
