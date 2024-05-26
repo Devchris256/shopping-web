@@ -1,0 +1,106 @@
+@use '../../base/minxis' as m;
+@use '../../base/variables' as v;
+
+.footer {
+    background: v.$black;
+    padding-block: 2.5rem;
+
+    &__logo {
+        inline-size: 8rem;
+        block-size: auto;
+    }
+
+    &__main {
+        max-inline-size: 25.9375rem;
+    }
+
+    &__text {
+        color: #8E8E8E;
+        font-size: 1.125rem;
+        
+    }
+    &__redes {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__red {
+        display: block;
+        background: #EBD96B;
+        inline-size: 3.25rem;
+        aspect-ratio: 1/1;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        inline-size: auto;
+    }
+
+    &__nav {
+        margin-block-start: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__widget {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__category {
+        color: #D9D9D9;
+    }
+
+    &__item {
+        color: #8E8E8E;
+        transition: color .3s;
+
+        &:hover {
+            color: v.$white;
+        }
+    }
+
+    @include m.phone {
+        &__text {
+            font-size: 1.25rem;
+        }
+
+        &__nav {
+            @include m.gridColum(3);
+            margin-block-start: 3rem;
+        }
+    }
+
+    @include m.tablet {
+
+        padding-block: 5rem;
+
+        &__content {
+            @include m.gridColum(2);
+            justify-content: space-between;
+        }
+
+        &__nav {
+            margin: 0;
+        }
+    }
+
+    @include m.desk {
+        padding-block: 6rem;
+
+        &__text, 
+        &__category,
+        &__item {
+            font-size: 1.5rem;
+        }
+    }
+
+}

@@ -93,6 +93,19 @@
             grid-column: 2;
         }
 
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__text {
+            font-size: 1.5rem;
+        }
+
+        &__day,
+        &__term {
+            font-size: 1.25rem;
+        }
+
     }
 
     @include m.desk {
@@ -100,10 +113,10 @@
             background-size: 3.5rem, 3.5rem, 3.5rem, 3.5rem, cover;
         }
 
-
         &__button {
             @include m.button(uppercase, 1.5rem, 1rem, 1.5rem);
             display: inline-block;
+            margin-block-start: 1.5rem;
         }
     }
 
@@ -114,8 +127,21 @@
 
 
         &__button {
-            @include m.button(none, 2rem, 1rem, 1.5rem);
+            @include m.button(uppercase, 2rem, 1rem, 1.5rem);
             display: inline-block;
+        }
+
+        &__title {
+            font-size: 4.5rem;
+        }
+
+        &__text {
+            font-size: 2.25rem;
+        }
+
+        &__day,
+        &__term {
+            font-size: 2rem;
         }
     }
 
